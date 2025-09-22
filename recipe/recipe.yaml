@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: azure-mgmt-datamigration
-  version: 10.0.0
+  version: "10.1.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/azure-mgmt-datamigration-${{ version }}.zip
-  sha256: 5cee70f97fe3a093c3cb70c2a190c2df936b772e94a09ef7e3deb1ed177c9f32
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: c28ef8f162b945a4cb5006404a303741c246f0331249e601d15ea1fdce95c54a
 
 build:
   number: 0
